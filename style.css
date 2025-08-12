@@ -1,0 +1,230 @@
+/* Train animation styles */
+.train-animation-wrapper {
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+    height: 40px;
+    margin: 0 0 12px 0;
+    position: relative;
+    background: transparent;
+}
+.train-svg {
+    position: absolute;
+    left: -260px;
+    right: auto;
+    top: 4px;
+    animation: train-move 10s linear infinite;
+    z-index: 1;
+    transform: none;
+}
+@keyframes train-move {
+    0% { left: -260px; }
+    100% { left: 100vw; }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+h1 {
+    color: #2d3a4b;
+    margin-bottom: 24px;
+    font-size: 1.7rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 1rem;
+}
+
+input[type="date"] {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 220px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#result {
+    margin-top: 24px;
+    font-size: 18px;
+    color: #2d3a4b;
+    word-break: break-word;
+}
+
+
+:root {
+    --bg: #f4f6fb;
+    --container-bg: #fff;
+    --text: #2d3a4b;
+    --label: #444;
+    --input-bg: #fff;
+    --input-border: #ccc;
+    --button-bg: #007bff;
+    --button-hover: #0056b3;
+    --button-text: #fff;
+    --shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    transition: background 0.2s, color 0.2s;
+}
+
+.container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: var(--container-bg);
+    padding: 32px 24px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: background 0.2s;
+}
+
+h1 {
+    color: var(--text);
+    margin-bottom: 24px;
+    font-size: 1.7rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--label);
+    font-size: 1rem;
+}
+
+input[type="date"] {
+    padding: 8px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 16px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background: var(--input-bg);
+    color: var(--text);
+    transition: background 0.2s, color 0.2s;
+    min-width: 0;
+    overflow: hidden;
+}
+
+button[type="submit"] {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 220px;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: var(--button-hover);
+}
+
+#result {
+    margin-top: 24px;
+    font-size: 18px;
+    color: var(--text);
+    word-break: break-word;
+}
+
+#themeToggle {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    z-index: 10;
+    color: var(--text);
+    transition: color 0.2s;
+}
+
+body.dark {
+    --bg: #181c24;
+    --container-bg: #232a36;
+    --text: #f4f6fb;
+    --label: #c0c6d1;
+    --input-bg: #232a36;
+    --input-border: #444b5a;
+    --button-bg: #2d7cff;
+    --button-hover: #1a4e99;
+    --button-text: #fff;
+    --shadow: 0 2px 16px rgba(0,0,0,0.32);
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        margin: 24px 1vw;
+        padding: 18px 6px;
+        border-radius: 8px;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    label, input[type="date"], button, #result {
+        font-size: 0.98rem;
+    }
+    input[type="date"] {
+        font-size: 1rem;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    button[type="submit"] {
+        padding: 10px 0;
+        max-width: 100%;
+    }
+    #themeToggle {
+        top: 8px;
+        right: 8px;
+        font-size: 1.2rem;
+    }
+}
